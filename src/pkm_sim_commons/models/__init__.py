@@ -1,3 +1,3 @@
-from pokemon import Pokemon
+from .pokemon import Pokemon
 
 __all__ = ['Pokemon']
