@@ -1,4 +1,4 @@
-from src.pkm_sim_commons import PokemonType
+from ..enums import PokemonType
 
 
 class Pokemon:
