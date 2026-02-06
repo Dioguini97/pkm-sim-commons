@@ -1,9 +1,12 @@
+from bson import ObjectId
+
 from ..enums import PokemonType
 
 
 class Pokemon:
-    def __init__(self, pokedex_num: int, name: str, types: list, base_stats: dict, abilities: list, height: float, weight: float,
+    def __init__(self,pokedex_num: int, name: str, types: list, base_stats: dict, abilities: list, height: float, weight: float,
                  move_list: list, img_url: str, crie_url: str=None, can_evolve: bool=None, varieties: list = None):
+        self._id = ObjectId(self)
         self.pokedex_num = pokedex_num
         self.name = name
         self.types = [PokemonType(_type) if isinstance(_type, PokemonType) else _type for _type in types]
