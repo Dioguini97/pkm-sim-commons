@@ -1,5 +1,6 @@
 import math
-from src.pkm_sim_commons import natures, Pokemon
+from .pokemon import Pokemon
+from ..utils import natures
 
 
 class CompetitivePokemon:
