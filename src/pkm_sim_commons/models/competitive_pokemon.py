@@ -3,7 +3,7 @@ from src.pkm_sim_commons import natures, Pokemon
 
 
 class CompetitivePokemon:
-    def __init__(self, name: str, ability: str, nature: str, moves: list, pkm: Pokemon,
+    def __init__(self, user: str, name: str, ability: str, nature: str, moves: list, pkm: Pokemon,
                  ivs: dict=None, evs: dict=None, item: str=None, level: int = 50,nickname: str=None):
         self.name = name
         self.nickname = nickname
@@ -23,6 +23,7 @@ class CompetitivePokemon:
             self.evs = {'hp': 0, 'atk': 0, 'def': 0, 'spa': 0, 'spd': 0, 'spe': 0}
         self.pkm = pkm
         self.calculate_all_stats()
+        self.user = user
 
 
     def calculate_stat(self, base: int, iv: int, ev: int, level: int, nature_modifier: float) -> int:
