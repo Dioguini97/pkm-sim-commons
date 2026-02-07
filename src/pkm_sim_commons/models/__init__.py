@@ -1,3 +1,3 @@
 from .pokemon import Pokemon
-
-__all__ = ['Pokemon']
+from .competitive_pokemon import CompetitivePokemon
+__all__ = ['Pokemon', 'CompetitivePokemon']
