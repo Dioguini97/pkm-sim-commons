@@ -1,4 +1,5 @@
 import math
+
 from .pokemon import Pokemon
 from ..utils import natures
 
