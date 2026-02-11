@@ -16,3 +16,32 @@ class Pokemon:
         self.crie_url = crie_url
         self.can_evolve = can_evolve
         self.varieties = varieties
+
+    def to_dict(self) -> dict:
+        """
+        Mapeia a instância da classe para um dicionário formatado.
+        Ideal para persistência no MongoDB ou respostas de API.
+        """
+        return {
+            "pokedex_num": self.pokedex_num,
+            "name": self.name,
+            # Convertemos o Enum para o valor (string/int) para ser serializável
+            "types": [t.value for t in self.types],
+            "base_stats": self.base_stats,
+            "abilities": self.abilities,
+            "height": self.height,
+            "weight": self.weight,
+            "move_list": self.move_list,
+            "img_url": self.img_url,
+            "crie_url": self.crie_url,
+            "can_evolve": self.can_evolve,
+            "varieties": self.varieties
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict):
+        """
+        Cria uma instância de Pokemon a partir de um dicionário.
+        Útil quando lês dados do MongoDB ou de uma API externa.
+        """
+        return cls(**data)
