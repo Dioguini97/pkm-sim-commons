@@ -1,0 +1,11 @@
+[project]
+name = "pkm-sim-commons"
+version = "0.1.0"
+description = "Enums e utilitários partilhados para PKM Simulator"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'
