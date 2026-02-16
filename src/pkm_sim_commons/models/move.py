@@ -73,33 +73,3 @@ class Move:
         return cls(**data)
 
 
-
-
-def map_json_to_move(json_data):
-    return Move(
-        id=json_data['id'],
-        name=json_data['name'],
-        power=json_data['power'],
-        accuracy=json_data['accuracy'],
-        move_type=json_data['move_type'],
-        effect_chance=json_data.get('effect_chance'),
-        damage_class=json_data['damage_class'],
-        pp=json_data['pp'],
-        priority=json_data['priority'],
-        stat_changes=json_data['stat_changes'],
-        target=json_data['target'],
-        entries=json_data['entries'],
-        ailment=json_data['ailment'],
-        ailment_chance=json_data['ailment_chance'],
-        category=json_data['category'],
-        crit_rate=json_data['crit_rate'],
-        drain=json_data['drain'],
-        flinch_chance=json_data['flinch_chance'],
-        healing=json_data['healing'],
-        min_hits=json_data['min_hits'],
-        max_hits=json_data['max_hits'],
-        min_turns=json_data['min_turns'],
-        max_turns=json_data['max_turns'],
-        stat_chance=json_data['stat_chance']
-    )
-
